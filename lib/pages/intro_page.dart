@@ -18,20 +18,20 @@ class IntroPage extends StatelessWidget {
             const SizedBox(height: 10),
             //ShopName
             Text(
-              'SushiMan',
+              'Sushi Man',
               style: GoogleFonts.dmSerifDisplay(
                 fontSize: 28,
                 color: Colors.white,
               ),
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 25),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Image.asset('assets/image/bento.png'),
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 25),
             Text(
               'THE TASTE OF JAPANESE FOOD',
               style: GoogleFonts.dmSerifDisplay(
@@ -46,8 +46,13 @@ class IntroPage extends StatelessWidget {
                 height: 2,
               ),
             ),
-            const SizedBox(height: 10),
-            MyButton(text: 'Get Started'),
+            const SizedBox(height: 25),
+            MyButton(
+              text: 'Get Started',
+              onTap: () {
+                Navigator.pushNamed(context, '/menupage');
+              },
+            ),
           ],
         ),
       ),
